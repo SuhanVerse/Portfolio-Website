@@ -35,6 +35,8 @@
 
 </head>
 <body>
+
+  <!-- SideBar -->
   <nav class="sidebar">
     <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
 
@@ -48,28 +50,36 @@
         </li>
       </ul>
     </div>
-
   </nav>
-  <section id="hero">
-  <h1>
+
+  <!-- Hero section -->
+
+  <section id="hero" class="hero__remake">
+  <div class="hero__left">
+    <h1>Hello, I'm <br /><span>Suhan Khadka</span></h1>
     <img
-      src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=100&color=7158DD&center=false&vCenter=false&width=500&lines=Hi%2C+I%60m+Suhan+Khadka;Robotics+%26+IoT+Explorer;Computer+Engineering+Student"
+      src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=100&color=7158DD&center=false&vCenter=false&width=500&lines=Robotics+%26+IoT+Explorer;Computer+Engineering+Student;Web+Developer+%7C+Linux+Enthusiast"
       alt="Typing SVG"
-    >
-    <br />
-    I am a Computer Engineering Student
-  </h1>
-  <p>Computer Engineer</p>
-  
-  <div class="hero__buttons">
-    <button>
-      <span>Contact me</span> <i class="fa-solid fa-envelope"></i>
-    </button>
-    <a href="assets/Suhan_Khadka_CV.pdf" download class="btn-download">
-      <span>Download CV</span> <i class="fa-solid fa-download"></i>
-    </a>
+      class="hero__typing"
+    />
+
+    <div class="hero__buttons">
+      <a href="#about" class="hero__btn">About Me!</a>
+      <a href="#projects" class="hero__btn">Projects</a>
+    </div>
+
+    <div class="hero__socials">
+      <a href="https://github.com/suhankhadka"><i class="fa-brands fa-github"></i></a>
+      <a href="https://linkedin.com/in/suhankhadka"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="mailto:suhan@example.com"><i class="fa-solid fa-envelope"></i></a>
+    </div>
   </div>
-</section>
+
+  <div class="hero__right">
+    <img src="img/webdev.svg" alt="Web Developer Illustration" class="hero__image" />
+  </div>
+  </section>
+
 
   <!-- Skills -->
   <section id="skills" class="section">
