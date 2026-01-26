@@ -38,22 +38,26 @@
 </head>
 <body>
 
-  <!-- SideBar -->
-  <nav class="sidebar">
-    <i id="hamburger" class="fa-solid fa-bars sidebar_hamburger"></i>
+<!-- Sidebar -->
+<nav class="sidebar">
+  <i id="hamburger" class="fa-solid fa-bars sidebar__hamburger"></i>
 
-    <div class="sidebar_content">
-      <ul class="sidebar_list">
-        <li>
-          <a href="#hero">Home</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="sidebar__content">
+    <img class="sidebar__image" src="assets/img/pic2.png" alt="Suhan Khadka" />
+    <h1 class="sidebar__name">Suhan Khadka</h1>
+    <p class="sidebar__job">Robotics Explorer<span>| AI Enthusiast</span></p>
 
+    <ul class="sidebar__list">
+      <li class="sidebar__list__item"><a href="#hero">Home</a></li>
+      <li class="sidebar__list__item"><a href="#about">About</a></li>
+      <li class="sidebar__list__item"><a href="#skills">Skills</a></li>
+      <li class="sidebar__list__item"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Page Wrapper -->
+<div id="mainContent">
   <!-- Hero section -->
 
   <section id="hero" class="hero__remake">
@@ -249,6 +253,9 @@
   </div>
 </section>
 
+</div>
+</body>
+
 
 <!-- Animation -->
 <script>
@@ -284,12 +291,26 @@
 </script>
 
 <script>
-  const hamburger = document.querySelector("#hamburger");
+  const hamburger = document.getElementById("hamburger");
+  const sidebar = document.querySelector(".sidebar__content");
+  const mainContent = document.getElementById("mainContent");
 
-  hamburger.addEventListener("click", ()=> {
-    hamburger.classList.toggle("sidebar_hamburger_translate");
+  hamburger.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+    mainContent.classList.toggle("shifted");
+
+    // Toggle icon between hamburger and X
+    if (hamburger.classList.contains("fa-bars")) {
+      hamburger.classList.remove("fa-bars");
+      hamburger.classList.add("fa-xmark");
+    } else {
+      hamburger.classList.remove("fa-xmark");
+      hamburger.classList.add("fa-bars");
+    }
   });
 </script>
+
+
 
 <!-- Form Validation -->
 <script>
@@ -310,5 +331,5 @@
 
 <!-- Footer -->
 
-</body>
+
 </html>
