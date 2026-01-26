@@ -7,7 +7,7 @@
   <meta name="description" content="I’m Suhan Khadka, a B.E. Computer Engineering student from Lalitpur, Nepal, and I love bringing code and circuits together to solve real problems.">
   <meta name="author" content="Suhan Khadka">
   <meta name="keywords" content="BCT,Computer Engineering,Robotics,AI">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <!-- Font Awesome -->
   <link
     rel="stylesheet"
@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/skills.css" />
   <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/work_count.css">
   <link rel="stylesheet" href="css/sidebar.css" />
 
 </head>
@@ -76,7 +77,7 @@
   </div>
 
   <div class="hero__right">
-    <img src="img/webdev.svg" alt="Web Developer Illustration" class="hero__image" />
+    <img src="assets/img/webdev.svg" alt="Web Developer Illustration" class="hero__image" />
   </div>
   </section>
 
@@ -85,7 +86,7 @@
   <div class="about__wrapper">
     <!-- Left: Profile Image -->
     <div class="about__left">
-      <img src="img/profile.JPG" alt="Suhan Khadka" class="about__photo" />
+      <img src="assets/img/profile.JPG" alt="Suhan Khadka" class="about__photo" />
     </div>
 
     <!-- Right: Text Content -->
@@ -103,6 +104,8 @@
     </div>
   </div>
 </section>
+
+<!--Skills -->
 
 <section id="skills" class="section skills__grid">
   <span class="section__title">My Speciality</span>
@@ -167,7 +170,35 @@
   </div>
 </section>
 
+<!-- Work Count -->
 
+<!-- Work Count -->
+<section id="work__count">
+  <div class="work__container">
+    <div class="work__card">
+      <h3>1400+</h3>
+      <p>GitHub Contributions</p>
+    </div>
+    <div class="work__card">
+      <h3>10</h3>
+      <p>Projects</p>
+    </div>
+    <div class="work__card">
+      <h3>0</h3>
+      <p>Clients</p>
+    </div>
+    <div class="work__card">
+      <h3>5</h3>
+      <p>Partners</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+
+
+<!-- Animation -->
 <script>
   const skillCards = document.querySelectorAll('.skill__card');
 
@@ -185,15 +216,28 @@
 </script>
 
 <script>
+  const workCards = document.querySelectorAll('.work__card');
+
+  const work = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('show');
+        }, index * 200); // staggered reveal
+      }
+    });
+  }, { threshold: 0.2 });
+
+  workCards.forEach(card => work.observe(card));
+</script>
+
+<script>
   const hamburger = document.querySelector("#hamburger");
 
   hamburger.addEventListener("click", ()=> {
     hamburger.classList.toggle("sidebar_hamburger_translate");
   });
 </script>
-
-
-
 
 
 <!-- Footer -->

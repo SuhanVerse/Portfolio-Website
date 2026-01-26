@@ -1,0 +1,72 @@
+#work__count {
+  background-image: url("../assets/img/cloudDark.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
+}
+
+#work__count::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.work__container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.work__card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.work__card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.work__card h3 {
+  font-size: 36px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.work__card p {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Quicksand", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Scroll animation */
+.work__card.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
