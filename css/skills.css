@@ -1,24 +1,25 @@
 .skills__grid {
   padding: 60px 20px;
+  text-align: center;
 }
 
 .skills__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
 
 .skill__card {
-  background: #fff;
+  background: #f2f3f7;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(30px);
 }
 
 .skill__card img {
@@ -28,20 +29,62 @@
   transition: transform 0.6s ease;
 }
 
+.skill__card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
 .skill__card:hover img {
   transform: rotateY(360deg);
 }
 
 .skill__card span {
   font-family: "Quicksand", sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
   font-weight: 600;
+  display: block;
+  margin-bottom: 10px;
 }
+
+.skill__bar {
+  width: 100%;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.skill__fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.skill__level {
+  font-size: 13px;
+  color: #555;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 5px;
+}
+
+/* Skill level widths */
+.beginner { width: 30%; background: #ec5453; }
+.intermediate { width: 60%; background: #f9bf3f; }
+.advanced { width: 90%; background: #2c98f0; }
 
 /* Scroll animation */
 .skill__card.show {
   opacity: 1;
   transform: translateY(0);
   transition: all 0.6s ease;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 }

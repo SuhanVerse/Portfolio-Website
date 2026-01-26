@@ -104,48 +104,85 @@
   </div>
 </section>
 
-<!-- Skills -->
 <section id="skills" class="section skills__grid">
   <span class="section__title">My Speciality</span>
   <span class="section__subtitle">My Skills</span>
 
   <div class="skills__container">
-    <a href="https://www.python.org" class="skill__card" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
-      <span>Python</span>
-    </a>  
     <a href="https://www.rust-lang.org" class="skill__card" target="_blank">
-      <img src="assets/icons/rust.svg" alt="Rust" />
+      <img src="assets/icons/Rust.svg" alt="Rust" />
       <span>Rust</span>
+      <div class="skill__bar"><div class="skill__fill intermediate"></div></div>
+      <p class="skill__level">Intermediate</p>
     </a>
-    <a href="https://isocpp.org" class="skill__card" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" />
-      <span>C++</span>
-    </a>
+
     <a href="https://www.ros.org" class="skill__card" target="_blank">
-      <img src="https://skillicons.dev/icons?i=ros" alt="ROS" />
+      <img src="assets/icons/ROS.svg" alt="ROS" />
       <span>ROS</span>
+      <div class="skill__bar"><div class="skill__fill beginner"></div></div>
+      <p class="skill__level">Beginner</p>
     </a>
+
+    <a href="https://www.python.org" class="skill__card" target="_blank">
+      <img src="assets/icons/Python.svg" alt="Python" />
+      <span>Python</span>
+      <div class="skill__bar"><div class="skill__fill advanced"></div></div>
+      <p class="skill__level">Advanced</p>
+    </a>
+
+    <a href="https://isocpp.org" class="skill__card" target="_blank">
+      <img src="assets/icons/C++.svg" alt="C++" />
+      <span>C++</span>
+      <div class="skill__bar"><div class="skill__fill advanced"></div></div>
+      <p class="skill__level">Advanced</p>
+    </a>
+
     <a href="https://www.espressif.com/en/products/socs/esp32" class="skill__card" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/ESP32_logo.svg" alt="ESP32" />
+      <img src="assets/icons/ESP32.svg" alt="ESP32" />
       <span>ESP32</span>
+      <div class="skill__bar"><div class="skill__fill intermediate"></div></div>
+      <p class="skill__level">Intermediate</p>
     </a>
+
     <a href="https://www.arduino.cc" class="skill__card" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino" />
+      <img src="assets/icons/Arduino.svg" alt="Arduino" />
       <span>Arduino</span>
+      <div class="skill__bar"><div class="skill__fill advanced"></div></div>
+      <p class="skill__level">Advanced</p>
     </a>
+
     <a href="https://www.latex-project.org" class="skill__card" target="_blank">
-      <img src="https://skillicons.dev/icons?i=latex" alt="LaTeX" />
+      <img src="assets/icons/Latex.svg" alt="LaTeX" />
       <span>LaTeX</span>
+      <div class="skill__bar"><div class="skill__fill intermediate"></div></div>
+      <p class="skill__level">Intermediate</p>
     </a>
+
     <a href="https://github.com" class="skill__card" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      <img src="assets/icons/Github.svg" alt="GitHub" />
       <span>GitHub</span>
+      <div class="skill__bar"><div class="skill__fill advanced"></div></div>
+      <p class="skill__level">Advanced</p>
     </a>
   </div>
 </section>
 
 
+<script>
+  const skillCards = document.querySelectorAll('.skill__card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('show');
+        }, index * 150);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  skillCards.forEach(card => observer.observe(card));
+</script>
 
 <script>
   const hamburger = document.querySelector("#hamburger");
@@ -154,6 +191,11 @@
     hamburger.classList.toggle("sidebar_hamburger_translate");
   });
 </script>
+
+
+
+
+
 <!-- Footer -->
 
 </body>
