@@ -6,7 +6,7 @@
   align-items: center;
   padding: 80px 60px;
   height: 100vh;
-  background-image: url('../assets/img/cloudBg.png'); 
+  background-image: url("../assets/img/cloudBg.png");
   background-size: cover;
   background-position: center;
   flex-wrap: wrap;
@@ -24,7 +24,7 @@
 }
 
 .hero__left h1 span {
-  color: #7158DD;
+  color: #7158dd;
   font-weight: 700;
 }
 
@@ -40,7 +40,7 @@
 
 .hero__btn {
   padding: 10px 20px;
-  background-color: #7158DD;
+  background-color: #7158dd;
   color: white;
   border-radius: 8px;
   font-family: "Quicksand", sans-serif;
@@ -61,7 +61,7 @@
 }
 
 .hero__socials a:hover {
-  color: #7158DD;
+  color: #7158dd;
 }
 
 .hero__right {
@@ -98,7 +98,8 @@
     padding: 40px 20px;
   }
 
-  .hero__left, .hero__right {
+  .hero__left,
+  .hero__right {
     max-width: 100%;
   }
 

@@ -17,8 +17,10 @@
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
   cursor: pointer;
   opacity: 0;
   transform: translateY(30px);
@@ -33,7 +35,7 @@
 
 .skill__card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .skill__card:hover img {
@@ -72,9 +74,18 @@
 }
 
 /* Skill level widths */
-.beginner { width: 30%; background: #ec5453; }
-.intermediate { width: 60%; background: #f9bf3f; }
-.advanced { width: 90%; background: #2c98f0; }
+.beginner {
+  width: 30%;
+  background: #ec5453;
+}
+.intermediate {
+  width: 60%;
+  background: #f9bf3f;
+}
+.advanced {
+  width: 90%;
+  background: #2c98f0;
+}
 
 /* Scroll animation */
 .skill__card.show {
